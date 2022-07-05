@@ -15,6 +15,7 @@
 // Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg 
 
 const teamInfo = document.getElementById('team-info');
+const card = document.getElementById('card');
 
 const team = [
 
@@ -45,7 +46,8 @@ let memberInfo = '';
 for(i = 0; i < team.length; i++){
     teamMember = team[i];
 
-    memberInfo += `<strong>Firstname:</strong>    ${team[i]['firstName']} | <strong>Secondname:</strong> ${team[i]['lastName']}  | <strong>Role:</strong> ${team[i]['role']} | <strong>Source:</strong> ${team[i]['img']}<br/> `
+    memberInfo += `<strong>Firstname:</strong> ${team[i]['firstName']} | <strong>Secondname:</strong> ${team[i]['lastName']} | <strong>Role:</strong> ${team[i]['role']} <br> <img src="./img/${team[i]['img']}"/><br/> `
 }
 
 teamInfo.innerHTML = memberInfo;
+
