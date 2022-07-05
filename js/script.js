@@ -14,6 +14,8 @@
 // Scott Estrada |	Developer            |	scott-estrada-developer.jpg
 // Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg 
 
+const teamInfo = document.getElementById('team-info');
+
 const team = [
 
    {firstName: 'Wayne', lastName: 'Barnett', role: 'Founder & CEO', img: 'wayne-barnett-founder-ceo.jpg'},
@@ -36,3 +38,14 @@ for(let i = 0; i < team.length; i++){
     console.log('Role:' + currentPersonalInfo.role)
     console.log('Source:' + currentPersonalInfo.img)
 }
+
+//Stampo le stesse informazioni in pagina
+let memberInfo = '';
+
+for(i = 0; i < team.length; i++){
+    teamMember = team[i];
+
+    memberInfo += `<strong>Firstname:</strong>    ${team[i]['firstName']} | <strong>Secondname:</strong> ${team[i]['lastName']}  | <strong>Role:</strong> ${team[i]['role']} | <strong>Source:</strong> ${team[i]['img']}<br/> `
+}
+
+teamInfo.innerHTML = memberInfo;
