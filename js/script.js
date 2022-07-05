@@ -26,3 +26,13 @@ const team = [
 ]
 
 console.log(team)
+
+//Stampo su console le informazioni di ciascuno e le vado a prelevare tramite un ciclo for
+for(let i = 0; i < team.length; i++){
+    const currentPersonalInfo = team[i];
+    console.log('-----------------TEAM MEMBER--------------------')
+    console.log('Firstname:' + currentPersonalInfo.firstName)
+    console.log('Secondname:' + currentPersonalInfo.lastName)
+    console.log('Role:' + currentPersonalInfo.role)
+    console.log('Source:' + currentPersonalInfo.img)
+}
